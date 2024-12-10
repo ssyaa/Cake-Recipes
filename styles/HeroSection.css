@@ -1,0 +1,33 @@
+.hero-heading, .hero-paragraph {
+    opacity: 0; /* Mulai dengan opacity 0 */
+    transform: translateX(-100px); /* Mulai dari kiri (di luar layar) */
+    animation: slideIn 2s forwards; /* Animasi slideIn selama 2 detik */
+}
+
+.hero-heading {
+    animation-delay: 0.5s; /* Tunda sedikit untuk heading */
+}
+
+.hero-paragraph {
+    animation-delay: 0.5s; /* Tunda sedikit untuk paragraf */
+}
+
+.hero-image {
+    object-fit: cover;
+    height: 120vh;
+    width: 100%;
+    position: absolute;
+    top: -355%; /* Menarik gambar ke atas sebanyak 20% dari tinggi gambar */
+}
+
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px); /* Mulai di luar layar */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Akhirnya berada di posisi semula */
+    }
+}
